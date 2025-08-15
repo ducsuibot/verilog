@@ -1,0 +1,13 @@
+// posedge khi tín hiệu đi lên và negedge khi tín hiệu đi xuống
+// ví dụ
+// always @(posedge clk)
+//		register <= register_input
+module baitap_3_6_3();
+	input d;
+	input clk;
+	output reg q;
+	
+	alway @(posedge clk) begin
+		q <= d;
+	end
+endmodule

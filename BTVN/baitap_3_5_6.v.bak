@@ -1,0 +1,7 @@
+// 3.5.6: mở rộng dấu
+module baitap_3_5_6(offset,src1);
+	input [7:0] offset;
+	output wire [15:0] src;
+	
+	assign src = {8{offset[7]},offset};
+endmodule

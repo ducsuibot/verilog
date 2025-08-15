@@ -1,0 +1,15 @@
+module baitap_3_6_6(
+	input q_in,
+	input clk,
+	input reset,
+	input enable,
+	output reg data
+);
+	always @(posedge clk) begin
+		if(reset) begin
+			data <= 0 ;
+		end else begin
+			data <= q_in;
+		end
+	end
+endmodule

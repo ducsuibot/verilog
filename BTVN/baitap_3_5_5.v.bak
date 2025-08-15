@@ -1,0 +1,18 @@
+module baitap_3_5_5(out,a,b,c,d); // module add_concatenate
+	input [7:0] a;
+	input [4:0] b;
+	input [1:0] c;
+	input d;
+	output [7:0] out;
+	add8bit(.sum(out),.cout(),.a(a),.b({b,c,d}),.cin());
+	// đầu vào 8 bit b của bộ cộng là 1 vector ghép từ 3 vector b(5bit) c(2bit) và d (1bit)
+endmodule
+	// Module add8bit: thực hiện cộng 2 số 8-bit a và b với ngõ vào cin và xuất ra tổng sum và cờ nhớ cout.
+module add8bit(sum,cout,a,b,cin);
+	output [7:0] sum;
+	output cout;
+	input [7:0] a;
+	input [7:0] b;
+	input cin;
+	assign {cout,sum} = a + b + cin;
+endmodule

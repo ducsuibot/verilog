@@ -1,0 +1,44 @@
+// 6.2.1 khái niệm
+// FSM đc triển khai bằng mạch logic tuần tự gồm 2 khối cơ bản
+// Khối 1: Logic tổ hợp mô tả trạng thái kế tiếp và hàm đàu ra.
+// Khối 2: Khối Flip Flop lưu trữ trạng thái hiện tại của mạch.
+// FSM được mô tả bằng đồ thị chuyển trạng thái
+// 6.2.2 Mô tả FSM trong verilog
+// Mô tả logic tổ hợp và FF riêng rẽ 
+// Logic tổ hợpđược mô tả bằng khối always và phép gán blocking , dùng lệnh case, mỗi case là 1 trạng thái
+// FF được mô tả bằng khối always có đồng hồ và phép gán non blocking.
+// 6.2.1
+// fsm
+module baitap_6_2_1 (clk,reset,a,b,Y,Z);
+	input clk,reset,a,b;
+	output reg Y,Z;
+	localparam S0 = 2'b00, S1 = 2'b01, S2 = 2'b10;
+	output reg[1:0] state,next_state;
+	
+	always @(posedge clk,posedge reset) begin
+		if(reset) begin
+			state <= S0;
+		end else begin
+			state <= next_state;
+		end
+	end
+	
+	always @(state,a,b) begin
+		case(state)
+			S0: if(a) begin
+					next_state = S1;
+					Z = 1;
+				  end else begin
+					next_state = S0;
+			S1: begin
+					Y = 1;
+					if(b) begin
+						next_state = S2;
+						Z = 1;
+					end else begin
+						next_state = S1;
+					end
+			S2: next_state = S0;
+		endcase
+	end
+endmodule
