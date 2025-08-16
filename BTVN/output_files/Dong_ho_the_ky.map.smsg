@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at time_date_counter.v(46): always construct contains both blocking and non-blocking assignments File: E:/Bai_tap_verilog/verilog/BTVN/time_date_counter.v Line: 46

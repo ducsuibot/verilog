@@ -1,0 +1,254 @@
+|top
+clk => clk.IN1
+rst_n => rst_n.IN7
+second[0] << cnt_60s:my_60s.second
+second[1] << cnt_60s:my_60s.second
+second[2] << cnt_60s:my_60s.second
+second[3] << cnt_60s:my_60s.second
+second[4] << cnt_60s:my_60s.second
+second[5] << cnt_60s:my_60s.second
+minute[0] << cnt_60m:my_60m.minute
+minute[1] << cnt_60m:my_60m.minute
+minute[2] << cnt_60m:my_60m.minute
+minute[3] << cnt_60m:my_60m.minute
+minute[4] << cnt_60m:my_60m.minute
+minute[5] << cnt_60m:my_60m.minute
+hour[0] << cnt_24h:my_24h.hour
+hour[1] << cnt_24h:my_24h.hour
+hour[2] << cnt_24h:my_24h.hour
+hour[3] << cnt_24h:my_24h.hour
+hour[4] << cnt_24h:my_24h.hour
+day[0] << cnt_day:my_day.day
+day[1] << cnt_day:my_day.day
+day[2] << cnt_day:my_day.day
+day[3] << cnt_day:my_day.day
+day[4] << cnt_day:my_day.day
+month[0] << month[0].DB_MAX_OUTPUT_PORT_TYPE
+month[1] << month[1].DB_MAX_OUTPUT_PORT_TYPE
+month[2] << month[2].DB_MAX_OUTPUT_PORT_TYPE
+month[3] << month[3].DB_MAX_OUTPUT_PORT_TYPE
+year[0] << year[0].DB_MAX_OUTPUT_PORT_TYPE
+year[1] << year[1].DB_MAX_OUTPUT_PORT_TYPE
+year[2] << year[2].DB_MAX_OUTPUT_PORT_TYPE
+year[3] << year[3].DB_MAX_OUTPUT_PORT_TYPE
+year[4] << year[4].DB_MAX_OUTPUT_PORT_TYPE
+year[5] << year[5].DB_MAX_OUTPUT_PORT_TYPE
+year[6] << year[6].DB_MAX_OUTPUT_PORT_TYPE
+year[7] << year[7].DB_MAX_OUTPUT_PORT_TYPE
+year[8] << year[8].DB_MAX_OUTPUT_PORT_TYPE
+year[9] << year[9].DB_MAX_OUTPUT_PORT_TYPE
+year[10] << year[10].DB_MAX_OUTPUT_PORT_TYPE
+year[11] << year[11].DB_MAX_OUTPUT_PORT_TYPE
+year[12] << year[12].DB_MAX_OUTPUT_PORT_TYPE
+year[13] << year[13].DB_MAX_OUTPUT_PORT_TYPE
+year[14] << year[14].DB_MAX_OUTPUT_PORT_TYPE
+year[15] << year[15].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|clk_1s:my_1s
+clk => clk_div~reg0.CLK
+clk => count[0].CLK
+clk => count[-1].CLK
+rst_n => clk_div~reg0.ACLR
+rst_n => count[0].ACLR
+rst_n => count[-1].ACLR
+clk_div <= clk_div~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|cnt_60s:my_60s
+clk_div => inc_m~reg0.CLK
+clk_div => second[0]~reg0.CLK
+clk_div => second[1]~reg0.CLK
+clk_div => second[2]~reg0.CLK
+clk_div => second[3]~reg0.CLK
+clk_div => second[4]~reg0.CLK
+clk_div => second[5]~reg0.CLK
+rst_n => inc_m~reg0.ACLR
+rst_n => second[0]~reg0.ACLR
+rst_n => second[1]~reg0.ACLR
+rst_n => second[2]~reg0.ACLR
+rst_n => second[3]~reg0.ACLR
+rst_n => second[4]~reg0.ACLR
+rst_n => second[5]~reg0.ACLR
+inc_m <= inc_m~reg0.DB_MAX_OUTPUT_PORT_TYPE
+second[0] <= second[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+second[1] <= second[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+second[2] <= second[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+second[3] <= second[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+second[4] <= second[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+second[5] <= second[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|cnt_60m:my_60m
+inc_m => inc_h~reg0.CLK
+inc_m => minute[0]~reg0.CLK
+inc_m => minute[1]~reg0.CLK
+inc_m => minute[2]~reg0.CLK
+inc_m => minute[3]~reg0.CLK
+inc_m => minute[4]~reg0.CLK
+inc_m => minute[5]~reg0.CLK
+rst_n => inc_h~reg0.ACLR
+rst_n => minute[0]~reg0.ACLR
+rst_n => minute[1]~reg0.ACLR
+rst_n => minute[2]~reg0.ACLR
+rst_n => minute[3]~reg0.ACLR
+rst_n => minute[4]~reg0.ACLR
+rst_n => minute[5]~reg0.ACLR
+inc_h <= inc_h~reg0.DB_MAX_OUTPUT_PORT_TYPE
+minute[0] <= minute[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+minute[1] <= minute[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+minute[2] <= minute[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+minute[3] <= minute[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+minute[4] <= minute[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+minute[5] <= minute[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|cnt_24h:my_24h
+inc_h => inc_d~reg0.CLK
+inc_h => hour[0]~reg0.CLK
+inc_h => hour[1]~reg0.CLK
+inc_h => hour[2]~reg0.CLK
+inc_h => hour[3]~reg0.CLK
+inc_h => hour[4]~reg0.CLK
+rst_n => inc_d~reg0.ACLR
+rst_n => hour[0]~reg0.ACLR
+rst_n => hour[1]~reg0.ACLR
+rst_n => hour[2]~reg0.ACLR
+rst_n => hour[3]~reg0.ACLR
+rst_n => hour[4]~reg0.ACLR
+inc_d <= inc_d~reg0.DB_MAX_OUTPUT_PORT_TYPE
+hour[0] <= hour[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+hour[1] <= hour[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+hour[2] <= hour[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+hour[3] <= hour[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+hour[4] <= hour[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|cnt_day:my_day
+inc_d => inc_month~reg0.CLK
+inc_d => day[0]~reg0.CLK
+inc_d => day[1]~reg0.CLK
+inc_d => day[2]~reg0.CLK
+inc_d => day[3]~reg0.CLK
+inc_d => day[4]~reg0.CLK
+rst_n => inc_month~reg0.ACLR
+rst_n => day[0]~reg0.PRESET
+rst_n => day[1]~reg0.ACLR
+rst_n => day[2]~reg0.ACLR
+rst_n => day[3]~reg0.ACLR
+rst_n => day[4]~reg0.ACLR
+month[0] => Decoder0.IN3
+month[1] => Decoder0.IN2
+month[2] => Decoder0.IN1
+month[3] => Decoder0.IN0
+year[0] => Mod0.IN24
+year[0] => Mod1.IN22
+year[0] => Equal1.IN31
+year[1] => Mod0.IN23
+year[1] => Mod1.IN21
+year[1] => Equal1.IN30
+year[2] => Mod0.IN22
+year[2] => Mod1.IN20
+year[3] => Mod0.IN21
+year[3] => Mod1.IN19
+year[4] => Mod0.IN20
+year[4] => Mod1.IN18
+year[5] => Mod0.IN19
+year[5] => Mod1.IN17
+year[6] => Mod0.IN18
+year[6] => Mod1.IN16
+year[7] => Mod0.IN17
+year[7] => Mod1.IN15
+year[8] => Mod0.IN16
+year[8] => Mod1.IN14
+year[9] => Mod0.IN15
+year[9] => Mod1.IN13
+year[10] => Mod0.IN14
+year[10] => Mod1.IN12
+year[11] => Mod0.IN13
+year[11] => Mod1.IN11
+year[12] => Mod0.IN12
+year[12] => Mod1.IN10
+year[13] => Mod0.IN11
+year[13] => Mod1.IN9
+year[14] => Mod0.IN10
+year[14] => Mod1.IN8
+year[15] => Mod0.IN9
+year[15] => Mod1.IN7
+inc_month <= inc_month~reg0.DB_MAX_OUTPUT_PORT_TYPE
+day[0] <= day[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+day[1] <= day[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+day[2] <= day[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+day[3] <= day[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+day[4] <= day[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|cnt_month:my_month
+inc_month => inc_year~reg0.CLK
+inc_month => month[0]~reg0.CLK
+inc_month => month[1]~reg0.CLK
+inc_month => month[2]~reg0.CLK
+inc_month => month[3]~reg0.CLK
+rst_n => inc_year~reg0.ACLR
+rst_n => month[0]~reg0.PRESET
+rst_n => month[1]~reg0.ACLR
+rst_n => month[2]~reg0.ACLR
+rst_n => month[3]~reg0.ACLR
+inc_year <= inc_year~reg0.DB_MAX_OUTPUT_PORT_TYPE
+month[0] <= month[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+month[1] <= month[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+month[2] <= month[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+month[3] <= month[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|cnt_year:my_year
+inc_year => year[0]~reg0.CLK
+inc_year => year[1]~reg0.CLK
+inc_year => year[2]~reg0.CLK
+inc_year => year[3]~reg0.CLK
+inc_year => year[4]~reg0.CLK
+inc_year => year[5]~reg0.CLK
+inc_year => year[6]~reg0.CLK
+inc_year => year[7]~reg0.CLK
+inc_year => year[8]~reg0.CLK
+inc_year => year[9]~reg0.CLK
+inc_year => year[10]~reg0.CLK
+inc_year => year[11]~reg0.CLK
+inc_year => year[12]~reg0.CLK
+inc_year => year[13]~reg0.CLK
+inc_year => year[14]~reg0.CLK
+inc_year => year[15]~reg0.CLK
+rst_n => year[0]~reg0.PRESET
+rst_n => year[1]~reg0.ACLR
+rst_n => year[2]~reg0.ACLR
+rst_n => year[3]~reg0.PRESET
+rst_n => year[4]~reg0.ACLR
+rst_n => year[5]~reg0.PRESET
+rst_n => year[6]~reg0.PRESET
+rst_n => year[7]~reg0.PRESET
+rst_n => year[8]~reg0.PRESET
+rst_n => year[9]~reg0.PRESET
+rst_n => year[10]~reg0.PRESET
+rst_n => year[11]~reg0.ACLR
+rst_n => year[12]~reg0.ACLR
+rst_n => year[13]~reg0.ACLR
+rst_n => year[14]~reg0.ACLR
+rst_n => year[15]~reg0.ACLR
+year[0] <= year[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+year[1] <= year[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+year[2] <= year[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+year[3] <= year[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+year[4] <= year[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+year[5] <= year[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+year[6] <= year[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+year[7] <= year[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+year[8] <= year[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+year[9] <= year[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+year[10] <= year[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+year[11] <= year[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+year[12] <= year[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+year[13] <= year[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+year[14] <= year[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+year[15] <= year[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
