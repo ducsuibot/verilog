@@ -4,175 +4,199 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "second[0]",
+					"name" : "led1[0]",
 					"strict" : false
 				},
 				{
-					"name" : "second[1]",
+					"name" : "led1[1]",
 					"strict" : false
 				},
 				{
-					"name" : "second[2]",
+					"name" : "led1[2]",
 					"strict" : false
 				},
 				{
-					"name" : "second[3]",
+					"name" : "led1[3]",
 					"strict" : false
 				},
 				{
-					"name" : "second[4]",
+					"name" : "led1[4]",
 					"strict" : false
 				},
 				{
-					"name" : "second[5]",
+					"name" : "led1[5]",
 					"strict" : false
 				},
 				{
-					"name" : "minute[0]",
+					"name" : "led1[6]",
 					"strict" : false
 				},
 				{
-					"name" : "minute[1]",
+					"name" : "led2[0]",
 					"strict" : false
 				},
 				{
-					"name" : "minute[2]",
+					"name" : "led2[1]",
 					"strict" : false
 				},
 				{
-					"name" : "minute[3]",
+					"name" : "led2[2]",
 					"strict" : false
 				},
 				{
-					"name" : "minute[4]",
+					"name" : "led2[3]",
 					"strict" : false
 				},
 				{
-					"name" : "minute[5]",
+					"name" : "led2[4]",
 					"strict" : false
 				},
 				{
-					"name" : "hour[0]",
+					"name" : "led2[5]",
 					"strict" : false
 				},
 				{
-					"name" : "hour[1]",
+					"name" : "led2[6]",
 					"strict" : false
 				},
 				{
-					"name" : "hour[2]",
+					"name" : "led3[0]",
 					"strict" : false
 				},
 				{
-					"name" : "hour[3]",
+					"name" : "led3[1]",
 					"strict" : false
 				},
 				{
-					"name" : "hour[4]",
+					"name" : "led3[2]",
 					"strict" : false
 				},
 				{
-					"name" : "day[0]",
+					"name" : "led3[3]",
 					"strict" : false
 				},
 				{
-					"name" : "day[1]",
+					"name" : "led3[4]",
 					"strict" : false
 				},
 				{
-					"name" : "day[2]",
+					"name" : "led3[5]",
 					"strict" : false
 				},
 				{
-					"name" : "day[3]",
+					"name" : "led3[6]",
 					"strict" : false
 				},
 				{
-					"name" : "day[4]",
+					"name" : "led4[0]",
 					"strict" : false
 				},
 				{
-					"name" : "month[0]",
+					"name" : "led4[1]",
 					"strict" : false
 				},
 				{
-					"name" : "month[1]",
+					"name" : "led4[2]",
 					"strict" : false
 				},
 				{
-					"name" : "month[2]",
+					"name" : "led4[3]",
 					"strict" : false
 				},
 				{
-					"name" : "month[3]",
+					"name" : "led4[4]",
 					"strict" : false
 				},
 				{
-					"name" : "year[0]",
+					"name" : "led4[5]",
 					"strict" : false
 				},
 				{
-					"name" : "year[1]",
+					"name" : "led4[6]",
 					"strict" : false
 				},
 				{
-					"name" : "year[2]",
+					"name" : "led5[0]",
 					"strict" : false
 				},
 				{
-					"name" : "year[3]",
+					"name" : "led5[1]",
 					"strict" : false
 				},
 				{
-					"name" : "year[4]",
+					"name" : "led5[2]",
 					"strict" : false
 				},
 				{
-					"name" : "year[5]",
+					"name" : "led5[3]",
 					"strict" : false
 				},
 				{
-					"name" : "year[6]",
+					"name" : "led5[4]",
 					"strict" : false
 				},
 				{
-					"name" : "year[7]",
+					"name" : "led5[5]",
 					"strict" : false
 				},
 				{
-					"name" : "year[8]",
+					"name" : "led5[6]",
 					"strict" : false
 				},
 				{
-					"name" : "year[9]",
+					"name" : "led6[0]",
 					"strict" : false
 				},
 				{
-					"name" : "year[10]",
+					"name" : "led6[2]",
 					"strict" : false
 				},
 				{
-					"name" : "year[11]",
+					"name" : "led6[3]",
 					"strict" : false
 				},
 				{
-					"name" : "year[12]",
+					"name" : "led6[4]",
 					"strict" : false
 				},
 				{
-					"name" : "year[13]",
+					"name" : "led6[5]",
 					"strict" : false
 				},
 				{
-					"name" : "year[14]",
+					"name" : "led6[6]",
 					"strict" : false
 				},
 				{
-					"name" : "year[15]",
+					"name" : "sw",
+					"strict" : false
+				},
+				{
+					"name" : "up_push",
+					"strict" : false
+				},
+				{
+					"name" : "sel[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sel[2]",
+					"strict" : false
+				},
+				{
+					"name" : "mode",
+					"strict" : false
+				},
+				{
+					"name" : "sel[1]",
 					"strict" : false
 				},
 				{
 					"name" : "rst_n",
+					"strict" : false
+				},
+				{
+					"name" : "down_push",
 					"strict" : false
 				},
 				{

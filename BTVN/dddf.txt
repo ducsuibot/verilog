@@ -1,0 +1,132 @@
+`timescale 1ns / 1ps
+module top(
+    input CLOCK_50,             // clock 50 MHz trên DE2-115
+    input [3:0] KEY,            // 4 nút nhấn (active-low)
+    input [17:0] SW,            // 18 switch gạt
+    output [6:0] HEX0, HEX1, HEX2, HEX3, HEX4, HEX5  // LED 7 đoạn
+);
+
+    wire clk_1s, clk_5hz;
+    wire up, down;
+    wire [5:0] enable;
+
+    wire [5:0] second;
+    wire [5:0] minute;
+    wire [4:0] hour;
+    wire [4:0] day;
+    wire [3:0] month;
+    wire [6:0] year;
+
+    wire inc_m, inc_h, inc_d, inc_mon, inc_y;
+
+    // sw: chọn chế độ hiển thị (SW[0])
+    wire sw = SW[0];
+
+    // clk_div (CLOCK_50 là 50MHz)
+    clk_div #(.clk_sys(50000000)) clk_div_t (
+        .clk(CLOCK_50),
+        .rst_n(SW[17]),        // reset bằng SW[17]
+        .clk_1s(clk_1s),
+        .clk_5hz(clk_5hz)
+    );
+
+    // control: KEY[0] up, KEY[1] down, KEY[2] mode
+    control control_t (
+			  .sel(SW[3:1]),          // SW[3:1] chọn 0=giây,1=phút,2=giờ,3=ngày,4=tháng,5=năm
+        .up_push(~KEY[0]),      // KEY active-low
+        .down_push(~KEY[1]),
+        .mode(~KEY[2]),         // KEY[2] = mode (0=đếm, 1=chỉnh)
+        .up(up),
+        .down(down),
+        .enable(enable)
+    );
+
+    // cnt_60s
+    cnt_60s cnt_60s_t (
+        .clk_5hz(clk_5hz),
+        .clk_1s(clk_1s),
+        .rst_n(SW[17]),
+        .enable(enable[0]),
+        .up(up),
+        .down(down),
+        .inc_m(inc_m),
+        .second(second)
+    );
+
+    // cnt_60p
+    cnt_60p cnt_60p_t (
+        .clk_5hz(clk_5hz),
+        .inc_m(inc_m),
+        .rst_n(SW[17]),
+        .enable(enable[1]),
+        .up(up),
+        .down(down),
+        .inc_h(inc_h),
+        .minute(minute)
+    );
+
+    // cnt_24h
+    cnt_24h cnt_24h_t (
+        .clk_5hz(clk_5hz),
+        .inc_h(inc_h),
+        .rst_n(SW[17]),
+        .enable(enable[2]),
+        .up(up),
+        .down(down),
+        .inc_d(inc_d),
+        .hour(hour)
+    );
+
+    // day_top
+    day_top day_top_t (
+        .clk_5hz(clk_5hz),
+        .inc_d(inc_d),
+        .rst_n(SW[17]),
+        .enable(enable[3]),
+        .up(up),
+        .down(down),
+        .inc_mon(inc_mon),
+        .day(day)
+    );
+
+    // cnt_12m
+    cnt_12m cnt_12m_t (
+        .clk_5hz(clk_5hz),
+        .inc_mon(inc_mon),
+        .rst_n(SW[17]),
+        .enable(enable[4]),
+        .up(up),
+        .down(down),
+        .inc_y(inc_y),
+        .month(month)
+    );
+
+    // cnt_year
+    cnt_year cnt_year_t (
+        .clk_5hz(clk_5hz),
+        .inc_y(inc_y),
+        .rst_n(SW[17]),
+        .enable(enable[5]),
+        .up(up),
+        .down(down),
+        .year(year)
+    );
+
+    // display ra 6 LED 7 đoạn HEX0..HEX5
+    display display_t (
+        .switch(sw),
+        .second(second),
+        .minute(minute),
+        .hour(hour),
+        .day(day),
+        .month(month),
+        .year(year),
+        .led1(HEX0),
+        .led2(HEX1),
+        .led3(HEX2),
+        .led4(HEX3),
+        .led5(HEX4),
+        .led6(HEX5)
+    );
+
+endmodule
