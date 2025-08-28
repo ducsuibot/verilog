@@ -1,0 +1,22 @@
+`timescale 1ns/ 1ps 
+module Instruction_Memory(
+	input [31:0] A,	// địa chỉ PC
+	output [31:0] RD	// ins của PC
+);
+	reg [31:0] ins_mem [0:63];	// 64 thanh ghi, mỗi thanh ghi 32 bit 
+	// mỗi lần PC sẽ nhảy 32 bit , tức là 4 byte
+	initial begin
+		 $readmemh("D:\I&R.txt", ins_mem);
+	end
+	
+	assign RD = ins_mem[A[31:2]]
+	// A: 0 => địa chỉ 0
+	// A: 4 => địa chỉ 1
+	// A: 8 => địa chỉ 2
+	// A: 12 => địa chỉ 3 ....
+	// A: 252 => địa chỉ 63
+	// A > 252 bỏ qua do đang setup địa chỉ là 64 
+endmodule
+	
+	
+	

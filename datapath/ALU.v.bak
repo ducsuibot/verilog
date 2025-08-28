@@ -1,0 +1,15 @@
+`timescale 1ns/1ps
+
+module ALU(
+	input [2:0] ALUControl,
+	input [31:0] SrcA,SrcB,
+	output [31:0] ALUResult
+);
+	always @(ALUControl) begin
+		case(ALUControl) 
+			3'b000: ALUResult = SrcA + SrcB;
+			3'b001: ALUResult = SrcA - SrcB;
+			default: ALUResult = 0;
+		endcase
+	end
+endmodule
