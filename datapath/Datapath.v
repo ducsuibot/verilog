@@ -3,7 +3,7 @@
 module Datapath(
 input        clk, rst,
 //Control Unit
-input        MemWrite, ALUSrc, RegWrite, JSrc, PCSrc,
+input        MemWrite, ALUSrc, RegWrite, PCSrc,
 input  [1:0] ResultSrc, ImmSrc,
 input  [2:0] ALUControl,
 output [6:0] opcode,
@@ -92,11 +92,7 @@ output [31:0] WriteDataM
                    .n1(PC_Target),
                    .sel(PCSrc),
                    .out(PCNext));
-    // J Mux
-    Mux2_1 myJMUx(.n0(PC),
-                  .n1(RD1),
-                  .sel(JSrc),
-                  .out(Target_Src));
+
     //Result Mux
     Mux3_1 myResultMux (.in0(ALUResult),
                         .in1(ReadDataM),

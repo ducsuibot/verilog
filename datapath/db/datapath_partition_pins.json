@@ -2,7 +2,408 @@
 	"partitions" : [
 		{
 			"name" : "Top",
-			"pins" : []
+			"pins" : [
+				{
+					"name" : "ALUResult[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUResult[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUResult[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUResult[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUResult[4]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUResult[5]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUResult[6]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUResult[7]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUResult[8]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUResult[9]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUResult[10]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUResult[11]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUResult[12]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUResult[13]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUResult[14]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUResult[15]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUResult[16]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUResult[17]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUResult[18]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUResult[19]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUResult[20]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUResult[21]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUResult[22]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUResult[23]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUResult[24]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUResult[25]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUResult[26]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUResult[27]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUResult[28]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUResult[29]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUResult[30]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUResult[31]",
+					"strict" : false
+				},
+				{
+					"name" : "Zero",
+					"strict" : false
+				},
+				{
+					"name" : "SrcA[31]",
+					"strict" : false
+				},
+				{
+					"name" : "SrcB[31]",
+					"strict" : false
+				},
+				{
+					"name" : "SrcA[30]",
+					"strict" : false
+				},
+				{
+					"name" : "SrcB[30]",
+					"strict" : false
+				},
+				{
+					"name" : "SrcA[29]",
+					"strict" : false
+				},
+				{
+					"name" : "SrcB[29]",
+					"strict" : false
+				},
+				{
+					"name" : "SrcA[28]",
+					"strict" : false
+				},
+				{
+					"name" : "SrcB[28]",
+					"strict" : false
+				},
+				{
+					"name" : "SrcA[27]",
+					"strict" : false
+				},
+				{
+					"name" : "SrcB[27]",
+					"strict" : false
+				},
+				{
+					"name" : "SrcA[26]",
+					"strict" : false
+				},
+				{
+					"name" : "SrcB[26]",
+					"strict" : false
+				},
+				{
+					"name" : "SrcA[25]",
+					"strict" : false
+				},
+				{
+					"name" : "SrcB[25]",
+					"strict" : false
+				},
+				{
+					"name" : "SrcA[24]",
+					"strict" : false
+				},
+				{
+					"name" : "SrcB[24]",
+					"strict" : false
+				},
+				{
+					"name" : "SrcA[23]",
+					"strict" : false
+				},
+				{
+					"name" : "SrcB[23]",
+					"strict" : false
+				},
+				{
+					"name" : "SrcA[22]",
+					"strict" : false
+				},
+				{
+					"name" : "SrcB[22]",
+					"strict" : false
+				},
+				{
+					"name" : "SrcA[21]",
+					"strict" : false
+				},
+				{
+					"name" : "SrcB[21]",
+					"strict" : false
+				},
+				{
+					"name" : "SrcA[20]",
+					"strict" : false
+				},
+				{
+					"name" : "SrcB[20]",
+					"strict" : false
+				},
+				{
+					"name" : "SrcA[19]",
+					"strict" : false
+				},
+				{
+					"name" : "SrcB[19]",
+					"strict" : false
+				},
+				{
+					"name" : "SrcA[18]",
+					"strict" : false
+				},
+				{
+					"name" : "SrcB[18]",
+					"strict" : false
+				},
+				{
+					"name" : "SrcA[17]",
+					"strict" : false
+				},
+				{
+					"name" : "SrcB[17]",
+					"strict" : false
+				},
+				{
+					"name" : "SrcA[16]",
+					"strict" : false
+				},
+				{
+					"name" : "SrcB[16]",
+					"strict" : false
+				},
+				{
+					"name" : "SrcA[15]",
+					"strict" : false
+				},
+				{
+					"name" : "SrcB[15]",
+					"strict" : false
+				},
+				{
+					"name" : "SrcA[14]",
+					"strict" : false
+				},
+				{
+					"name" : "SrcB[14]",
+					"strict" : false
+				},
+				{
+					"name" : "SrcA[13]",
+					"strict" : false
+				},
+				{
+					"name" : "SrcB[13]",
+					"strict" : false
+				},
+				{
+					"name" : "SrcA[12]",
+					"strict" : false
+				},
+				{
+					"name" : "SrcB[12]",
+					"strict" : false
+				},
+				{
+					"name" : "SrcA[11]",
+					"strict" : false
+				},
+				{
+					"name" : "SrcB[11]",
+					"strict" : false
+				},
+				{
+					"name" : "SrcA[10]",
+					"strict" : false
+				},
+				{
+					"name" : "SrcB[10]",
+					"strict" : false
+				},
+				{
+					"name" : "SrcA[9]",
+					"strict" : false
+				},
+				{
+					"name" : "SrcB[9]",
+					"strict" : false
+				},
+				{
+					"name" : "SrcA[8]",
+					"strict" : false
+				},
+				{
+					"name" : "SrcB[8]",
+					"strict" : false
+				},
+				{
+					"name" : "SrcA[7]",
+					"strict" : false
+				},
+				{
+					"name" : "SrcB[7]",
+					"strict" : false
+				},
+				{
+					"name" : "SrcA[6]",
+					"strict" : false
+				},
+				{
+					"name" : "SrcB[6]",
+					"strict" : false
+				},
+				{
+					"name" : "SrcA[5]",
+					"strict" : false
+				},
+				{
+					"name" : "SrcB[5]",
+					"strict" : false
+				},
+				{
+					"name" : "SrcA[4]",
+					"strict" : false
+				},
+				{
+					"name" : "SrcB[4]",
+					"strict" : false
+				},
+				{
+					"name" : "SrcA[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SrcB[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SrcA[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SrcB[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SrcA[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SrcB[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SrcA[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SrcB[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUControl[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUControl[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUControl[2]",
+					"strict" : false
+				}
+			]
 		}
 	]
 }
