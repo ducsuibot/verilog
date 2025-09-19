@@ -1,0 +1,14 @@
+E:/TEST/T_ff.v {1 {vlog -work work -stats=none E:/TEST/T_ff.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+
+} {} {}} E:/TEST/D_ff.v {1 {vlog -work work -stats=none E:/TEST/D_ff.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+
+} {} {}} E:/TEST/tb_top.v {1 {vlog -work work -stats=none E:/TEST/tb_top.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module tb_top
+
+Top level modules:
+	tb_top
+
+} {} {}}
